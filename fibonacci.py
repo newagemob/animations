@@ -5,7 +5,7 @@ from manim import *
 
 
 fibonacci_sequence = [
-    1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377
+    1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584,
 ]
 
 
@@ -25,6 +25,9 @@ class FibonacciSpiral(Scene):
             point = Dot(point=(x, y, 0))
             # add the point to the fibonacci spiral
             fibonacci_spiral.add(point)
+
+        # scale down the fibonacci spiral
+        fibonacci_spiral.scale(0.1)
 
         # draw a line between the points
         self.play(Create(fibonacci_spiral))
